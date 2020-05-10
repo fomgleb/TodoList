@@ -4,13 +4,19 @@ using System.Windows.Forms;
 
 namespace Todo
 {
-    public partial class TodoItem : UserControl
+    public partial class DoingControl : UserControl
     {
-        public TodoItem()
+        string _todoListName;
+
+        public DoingControl(string todoListName)
         {
             InitializeComponent();
+
             deleteButton.FlatAppearance.BorderSize = 0;
             deleteButton.FlatStyle = FlatStyle.Flat;
+
+            _todoListName = todoListName;
+
         }
 
 
@@ -19,6 +25,12 @@ namespace Todo
             BackColor = Color.Green;
             textLabel.Text = "Deleted";
             deleteButton.Visible = false;
+        }
+
+        private void DoingControl_MouseClick(object sender, MouseEventArgs e)
+        {
+            DoingEditForm doingEditForm = new DoingEditForm(textLabel.Text, _todoListName);
+            doingEditForm.ShowDialog();
         }
     }
 }

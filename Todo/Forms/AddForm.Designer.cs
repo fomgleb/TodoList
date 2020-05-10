@@ -36,7 +36,7 @@
             // 
             this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(175)))), ((int)(((byte)(72)))));
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addButton.Location = new System.Drawing.Point(67, 71);
             this.addButton.Margin = new System.Windows.Forms.Padding(0);
             this.addButton.Name = "addButton";
@@ -51,10 +51,10 @@
             // 
             this.addTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.addTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.addTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTextBox.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addTextBox.Location = new System.Drawing.Point(12, 12);
             this.addTextBox.Name = "addTextBox";
-            this.addTextBox.Size = new System.Drawing.Size(266, 31);
+            this.addTextBox.Size = new System.Drawing.Size(266, 34);
             this.addTextBox.TabIndex = 4;
             // 
             // AddForm
@@ -65,10 +65,11 @@
             this.ClientSize = new System.Drawing.Size(290, 140);
             this.Controls.Add(this.addTextBox);
             this.Controls.Add(this.addButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddForm";
-            this.Text = "AddForm";
+            this.Text = "Add";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,6 +1,6 @@
 ﻿namespace Todo
 {
-    partial class TodoItem
+    partial class DoingControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -57,15 +57,16 @@
             this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // TodoItem
+            // Doing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.textLabel);
-            this.Name = "TodoItem";
+            this.Name = "Doing";
             this.Size = new System.Drawing.Size(530, 58);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DoingControl_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

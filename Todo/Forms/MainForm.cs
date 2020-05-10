@@ -41,7 +41,6 @@ namespace Todo
             addForm.ShowDialog();
             LoadDataTo(todoListBox);
         }
-        #endregion
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
@@ -51,5 +50,24 @@ namespace Todo
                 LoadDataTo(todoListBox);
             }
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (todoListBox.SelectedItem != null)
+            {
+                EditForm editForm = new EditForm(todoListBox.SelectedItem.ToString());
+                editForm.ShowDialog();
+                LoadDataTo(todoListBox);
+            }
+        }
+
+        private void todoListBox_DoubleClick(object sender, EventArgs e)
+        {
+            editButton_Click(editButton, null);
+        }
+
+        #endregion
+
+        
     }
 }

@@ -14,28 +14,54 @@ namespace Todo
                 Directory.CreateDirectory(directoryName);
         }
 
+        #region TodoList
         static public void CreateTodoList(string todoListName)
         {
             if (!Directory.Exists($@"{_mainDirectoryName}\{todoListName}"))
                 Directory.CreateDirectory($@"{_mainDirectoryName}\{todoListName}");
         }
 
-        static public void CreateDoing(string doingName, string todoListName)
-        {
-            File.Create($@"{_mainDirectoryName}\{todoListName}\{doingName}");
-        }
-
         static public void DeleteTodoList(string todoListName)
         {
-            if(Directory.Exists($@"{_mainDirectoryName}\{todoListName}"))
+            if (Directory.Exists($@"{_mainDirectoryName}\{todoListName}"))
                 Directory.Delete($@"{_mainDirectoryName}\{todoListName}", true);
         }
 
-        static public void DeleteDoing(string doingName, string todoListName)
+        static public void RenameTodoList(string oldTodoListName, string newTodoListName)
         {
-            if (File.Exists($@"{_mainDirectoryName}\{todoListName}\{doingName}"))
-                File.Delete($@"{_mainDirectoryName}\{todoListName}\{doingName}");
+            if (!Directory.Exists($@"{_mainDirectoryName}\{newTodoListName}"))
+                Directory.Move($@"{_mainDirectoryName}\{oldTodoListName}", $@"{_mainDirectoryName}\{newTodoListName}");
         }
+        #endregion
+
+        #region Doing
+        static public void CreateDoing(string doingText, string todoListName)
+        {
+            File.Create($@"{_mainDirectoryName}\{todoListName}\{doingText}");
+        }
+
+        static public void DeleteDoing(string doingText, string todoListName)
+        {
+            if (File.Exists($@"{_mainDirectoryName}\{todoListName}\{doingText}"))
+                File.Delete($@"{_mainDirectoryName}\{todoListName}\{doingText}");
+        }
+
+        static public void RenameDoing(string oldDoingText, string newDoingText, string todoListName)
+        {
+            if (!Directory.Exists($@"{_mainDirectoryName}\{todoListName}\{newDoingText}"))
+                Directory.Move($@"{_mainDirectoryName}\{todoListName}\{oldDoingText}", $@"{_mainDirectoryName}\{todoListName}\{oldDoingText}");
+        }
+        #endregion
+
+
+
+
+
+
+
+
+
+
 
         static public List<string> GetAllTodoLists()
         {

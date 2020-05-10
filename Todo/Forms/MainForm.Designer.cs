@@ -54,7 +54,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(331, 648);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(348, 648);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // todoListBox
@@ -62,17 +62,18 @@
             this.todoListBox.BackColor = System.Drawing.Color.Gray;
             this.todoListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.todoListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.todoListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.todoListBox.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.todoListBox.ForeColor = System.Drawing.SystemColors.Menu;
             this.todoListBox.FormattingEnabled = true;
-            this.todoListBox.ItemHeight = 31;
+            this.todoListBox.ItemHeight = 33;
             this.todoListBox.Items.AddRange(new object[] {
             "Download..."});
             this.todoListBox.Location = new System.Drawing.Point(0, 0);
             this.todoListBox.Margin = new System.Windows.Forms.Padding(0);
             this.todoListBox.Name = "todoListBox";
-            this.todoListBox.Size = new System.Drawing.Size(331, 540);
+            this.todoListBox.Size = new System.Drawing.Size(348, 539);
             this.todoListBox.TabIndex = 1;
+            this.todoListBox.DoubleClick += new System.EventHandler(this.todoListBox_DoubleClick);
             // 
             // tableLayoutPanel3
             // 
@@ -84,12 +85,12 @@
             this.tableLayoutPanel3.Controls.Add(this.addButton, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.deleteButton, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 540);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 539);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(331, 108);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(348, 109);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // editButton
@@ -97,26 +98,27 @@
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(170)))), ((int)(((byte)(24)))));
             this.editButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editButton.Location = new System.Drawing.Point(220, 0);
+            this.editButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.editButton.Location = new System.Drawing.Point(232, 0);
             this.editButton.Margin = new System.Windows.Forms.Padding(0);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(111, 108);
+            this.editButton.Size = new System.Drawing.Size(116, 109);
             this.editButton.TabIndex = 0;
             this.editButton.TabStop = false;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(175)))), ((int)(((byte)(72)))));
             this.addButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addButton.Location = new System.Drawing.Point(110, 0);
+            this.addButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.Location = new System.Drawing.Point(116, 0);
             this.addButton.Margin = new System.Windows.Forms.Padding(0);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(110, 108);
+            this.addButton.Size = new System.Drawing.Size(116, 109);
             this.addButton.TabIndex = 1;
             this.addButton.TabStop = false;
             this.addButton.Text = "Add";
@@ -128,12 +130,12 @@
             this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.deleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.deleteButton.Location = new System.Drawing.Point(0, 0);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(0);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(110, 108);
+            this.deleteButton.Size = new System.Drawing.Size(116, 109);
             this.deleteButton.TabIndex = 2;
             this.deleteButton.TabStop = false;
             this.deleteButton.Text = "Delete";
@@ -153,16 +155,17 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 648);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(929, 648);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel
             // 
             this.panel.AutoScroll = true;
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(334, 3);
+            this.panel.Location = new System.Drawing.Point(348, 0);
+            this.panel.Margin = new System.Windows.Forms.Padding(0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(547, 642);
+            this.panel.Size = new System.Drawing.Size(581, 648);
             this.panel.TabIndex = 1;
             // 
             // MainForm
@@ -170,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(884, 648);
+            this.ClientSize = new System.Drawing.Size(929, 648);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "MainForm";

@@ -8,6 +8,8 @@ namespace Todo
         public AddForm()
         {
             InitializeComponent();
+            addButton.FlatAppearance.BorderSize = 0;
+            addButton.FlatStyle = FlatStyle.Flat;
         }
 
         private void addButton_Click(object sender, EventArgs e)
