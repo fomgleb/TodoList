@@ -18,7 +18,7 @@ namespace Todo
 
         private void saveButton_Click(object sender, System.EventArgs e)
         {
-            List<string> todoListNames = new List<string>();
+            List<string> todoListNames = new List<string>(Save.GetAllTodoLists());
             foreach (var name in todoListNames) // Проверяем, есть ли такое имя что мы вписали в TextBox, в списке туду листов
                 if (name == editTextBox.Text) // Если такое имя есть
                 {
@@ -36,6 +36,11 @@ namespace Todo
 
                 editTextBox.Text = _todoListName;
             }
+        }
+
+        public string GetEditedTodo()
+        {
+            return editTextBox.Text;
         }
     }
 }

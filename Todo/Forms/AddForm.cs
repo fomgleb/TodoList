@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Todo
@@ -14,9 +15,18 @@ namespace Todo
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            List<string> todoListNames = new List<string>(Save.GetAllTodoLists());
+            foreach (var name in todoListNames) // Проверяем, есть ли такое имя что мы вписали в TextBox, в списке туду листов
+                if (name == addTextBox.Text) // Если такое имя есть
+                {
+                    MessageBox.Show("Такой Todo уже существует.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); // Пишем ошибку
+                    addTextBox.Text = "";
+                    return; //Прекращаем работу метода
+                }
             try
             {
-                Save.CreateTodoList(addTextBox.Text);
+                if (addTextBox.Text != "")
+                    Save.CreateTodoList(addTextBox.Text);
                 Close();
             }
             catch (Exception)
@@ -25,6 +35,11 @@ namespace Todo
 
                 addTextBox.Text = "";
             }
+        }
+
+        public string GetCreatedTodo()
+        {
+            return addTextBox.Text;
         }
     }
 }
